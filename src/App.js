@@ -32,8 +32,6 @@ function App() {
     setcvc(e)
   }
 
-  console.log(name);
-
   return (
     <div>
       <div className="App">

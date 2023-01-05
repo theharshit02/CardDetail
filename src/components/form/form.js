@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import styles from './form.module.css'
+import { ToastContainer, toast, Slide } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const Form = (props) => {
 
@@ -14,9 +16,9 @@ const Form = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(typeof cvc);
         if(holderName.length === 0 || cardNumber.length === 0 || month.length === 0 || year.length===0 || cvc.length === 0){
             seterr(true)
+            notify()
         }
         else {
             seterr(false)
@@ -25,9 +27,41 @@ const Form = (props) => {
             props.onMonth(month)
             props.onYear(year)
             props.onCvc(cvc)
+            notify()
         }
 
     }
+
+    
+    const notify = () => {
+        if (!err){
+            toast.success('Success', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Slide,
+            });
+        }
+        else if(err){
+            toast.error('Failed', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Slide,
+            })
+        }
+    }
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -75,6 +109,7 @@ const Form = (props) => {
         
         <br/><br/>
         <button className={styles.button} type="submit">Confirm</button>
+        <ToastContainer/>
       </form>
     </div>
   )
