@@ -1,9 +1,15 @@
 import './App.css';
+import Form from "./components/form/form"
 
 function App() {
   return (
     <div className="App">
-      hello
+      <div className='leftBar'></div>
+      <div className='rightBar'></div>
+      <div className='form'>
+        <Form/>
+      </div>
+      
     </div>
   );
 }
