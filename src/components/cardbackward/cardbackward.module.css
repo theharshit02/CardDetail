@@ -1,0 +1,49 @@
+.card{
+   position: absolute;
+   width: 448px;
+   height: 246px;
+   left: 200px;
+   /* top: 450px; */
+   bottom: 100px;
+
+   background: linear-gradient(106.8deg, #FFFFFF 0%, #D9D9D9 103.94%);
+   box-shadow: 10px 11px 62px rgba(0, 0, 0, 0.19);
+   border-radius: 10px;
+}
+
+.black{
+   position: absolute;
+   left: 0%;
+   right: 0%;
+   top: 9.35%;
+   bottom: 69.51%;
+
+   background: #000000;
+}
+
+.grey{
+    position: absolute;
+    left: 9.6%;
+    right: 9.82%;
+    top: 39.84%;
+    bottom: 44.72%;
+    
+    background: #ADB6BF;
+    border-radius: 4px;
+}
+
+.cvc{
+    position: absolute;
+    left: 85.79%;
+    right: 13.84%;
+    top: 27%;
+    /* bottom: 49.59%; */
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.235em;
+
+    color: #FFFFFF;
+}

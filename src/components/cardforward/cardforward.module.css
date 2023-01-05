@@ -1,0 +1,86 @@
+.card{
+    width: 447px;
+    height: 246px;
+    left: 122px;
+    top: 227px;
+
+    border-radius: 10px;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    box-shadow: 10px 11px 62px rgba(0, 0, 0, 0.19);
+
+}
+
+.circle{
+    position: relative;
+    width: 47px;
+    height: 47px;
+    left: 33px;
+    top: 30px;
+
+    border-radius: 100%;
+    background: #FEFFFF;
+}
+
+.designCircle{
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    left: 97px;
+    top: 46px;
+    border-radius: 100%;
+
+    background: linear-gradient(127.75deg, #623FF2 19.57%, #5E37EC 93.11%);
+    border: 1.5px solid #FFFFFF;
+}
+
+.numberStyle{
+    position: relative;
+    height: 27px;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+}
+.number{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.18em;
+
+    color: #FFFFFF;
+
+}
+
+.name{
+    position: absolute;
+    height: 11px;
+    left: 33px;
+    top: 205px;
+    
+    /* font-family: 'Roboto'; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 0.19em;
+    
+    color: #FFFFFF;
+}
+
+.expiry{
+    position: absolute;
+    width: 51px;
+    height: 13px;
+    left: 358px;
+    top: 204px;
+
+    /* font-family: 'Roboto'; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 0.235em;
+
+    color: #FFFFFF;
+}

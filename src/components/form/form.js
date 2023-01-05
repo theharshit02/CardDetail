@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from './form.module.css'
 
-const Form = () => {
+const Form = (props) => {
 
     const [holderName, setholderName] = useState("")
     const [cardNumber, setcardNumber] = useState("")
@@ -18,7 +18,14 @@ const Form = () => {
         if(holderName.length === 0 || cardNumber.length === 0 || month.length === 0 || year.length===0 || cvc.length === 0){
             seterr(true)
         }
-        else seterr(false)
+        else {
+            seterr(false)
+            props.onName(holderName)
+            props.onNumber(cardNumber)
+            props.onMonth(month)
+            props.onYear(year)
+            props.onCvc(cvc)
+        }
 
     }
   return (
