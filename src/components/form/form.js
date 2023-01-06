@@ -18,7 +18,6 @@ const Form = (props) => {
         e.preventDefault()
         if(holderName.length === 0 || cardNumber.length === 0 || month.length === 0 || year.length===0 || cvc.length === 0){
             seterr(true)
-            notify()
         }
         else {
             seterr(false)
@@ -34,7 +33,6 @@ const Form = (props) => {
 
     
     const notify = () => {
-        if (!err){
             toast.success('Success', {
                 position: "top-right",
                 autoClose: 5000,
@@ -46,20 +44,6 @@ const Form = (props) => {
                 theme: "dark",
                 transition: Slide,
             });
-        }
-        else if(err){
-            toast.error('Failed', {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-                transition: Slide,
-            })
-        }
     }
 
   return (
